@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Expenses</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <h1>Expenses</h1>
+    <div>
+   
+        <table id="expenseTbl">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Description</th>
+              <th>Amount</th>
+              <th>Vendor</th>
+            </tr>
+          </thead>
+            <tbody id="tblBody">
+              <tr id="tblRowInput">    
+                <input type="date" id="dateInput" name="date" placeholder="mm/dd/yyyy">
+                <input type="text" id="descrInput" name="descr" placeholder="description">
+                <input type="text" id="amountInput" name="amount" placeholder="amount">
+                <input type="text" id="vendorInput" name="vendor" placeholder="vendor">
+                <button type = "button" id="addBtn">Add Expense</button> 
+              </tr>
+            </tbody>
+        </table>
+
+    </div>
+      
+    <script src="expense.js"></script>
+  </body>
+</html>
