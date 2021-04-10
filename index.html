@@ -8,7 +8,13 @@
 <body>
   <h1>Expenses</h1>
     <div>
-   
+   <form id="form" >
+    <input type="date" id="dateInput" name="date" placeholder="mm/dd/yyyy">
+    <input type="text" id="descrInput" name="descr" placeholder="description">
+    <input type="number" id="amountInput" name="amount" placeholder="amount" min="1">
+    <input type="text" id="vendorInput" name="vendor" placeholder="vendor">
+    <button type = "submit" id="addBtn">Add Expense</button> 
+   </form>
         <table id="expenseTbl">
           <thead>
             <tr>
@@ -16,16 +22,10 @@
               <th>Description</th>
               <th>Amount</th>
               <th>Vendor</th>
+              <th></th>
             </tr>
           </thead>
             <tbody id="tblBody">
-              <tr id="tblRowInput">    
-                <input type="date" id="dateInput" name="date" placeholder="mm/dd/yyyy">
-                <input type="text" id="descrInput" name="descr" placeholder="description">
-                <input type="text" id="amountInput" name="amount" placeholder="amount">
-                <input type="text" id="vendorInput" name="vendor" placeholder="vendor">
-                <button type = "button" id="addBtn">Add Expense</button> 
-              </tr>
             </tbody>
         </table>
 

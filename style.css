@@ -1,39 +1,55 @@
 h1 {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    font-size: 30px;
-    font-weight: bold;
+  text-align: center;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  font-size: 30px;
+  font-weight: bold;
 }
-    
+form {
+  text-align: center;
+  margin-top: 7%;
+}
+
 table {
-    width: 100%;
+  margin-top: 5%;
+  width: 80%;
+  margin-left: 10%;
 }
 
 td {
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    padding: 15px;
-    text-align: left;
-    width: 10px; 
- }
-
- th { 
-    padding: 15px;
-    text-align: left;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+    'Lucida Sans', Arial, sans-serif;
+  padding: 15px;
+  text-align: center;
 }
 
- tbody tr:nth-child(even) {
-     background: rgb(232, 243, 233);
- }
-
- #addBtn {
-    background: rgb(76, 145, 112);
-    color: white;
-    font-weight: bold;
-    padding: 5px;
+th {
+  padding: 15px;
+  text-align: center;
 }
 
-#delExpenseBtn {
-    background: rgb(30, 76, 173);
-    color: white;
-    font-weight: bold;
-    padding: 5px;
-} 
+tr {
+  width: 80%;
+}
+
+tbody tr:nth-child(even) {
+  background: rgb(232, 243, 233);
+}
+
+#addBtn {
+  background: rgb(76, 145, 112);
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+#deleteButton {
+  background: rgb(30, 76, 173);
+  color: white;
+  font-weight: bold;
+  padding: 7px;
+  cursor: pointer;
+  border-radius: 8px;
+}
