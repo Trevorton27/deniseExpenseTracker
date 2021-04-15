@@ -43,44 +43,29 @@ function renderRow(expense) {
   const tableRow = document.createElement('tr');
   tableBody.appendChild(tableRow);
 
-  const dateCell = createDateCell(expense);
+  const dateCell = createCell(expense.date);
   tableRow.appendChild(dateCell);
 
-  const descriptionCell = createDescriptionCell(expense);
+  const descriptionCell = createCell(expense.description);
   tableRow.appendChild(descriptionCell);
 
-  const amountCell = createAmountCell(expense);
+  const amountCell = createCell(expense.amount);
   tableRow.appendChild(amountCell);
 
-  const vendorCell = createVendorCell(expense);
+  const vendorCell = createCell(expense.vendor);
   tableRow.appendChild(vendorCell);
 
+  const deleteCell = document.createElement('td');
+
   const deleteButton = createDeleteButton(expense);
-  tableRow.appendChild(deleteButton);
+  tableRow.appendChild(deleteCell);
+  deleteCell.appendChild(deleteButton);
 }
 
-function createDateCell(expense) {
+function createCell(expense) {
   const dateCell = document.createElement('td');
-  dateCell.textContent = expense.date;
+  dateCell.textContent = expense;
   return dateCell;
-}
-
-function createDescriptionCell(expense) {
-  const descriptionCell = document.createElement('td');
-  descriptionCell.textContent = expense.description;
-  return descriptionCell;
-}
-
-function createAmountCell(expense) {
-  const amountCell = document.createElement('td');
-  amountCell.textContent = expense.amount;
-  return amountCell;
-}
-
-function createVendorCell(expense) {
-  const vendorCell = document.createElement('td');
-  vendorCell.textContent = expense.vendor;
-  return vendorCell;
 }
 
 function createDeleteButton(expense) {
@@ -96,7 +81,7 @@ function createDeleteButton(expense) {
 }
 
 function deleteExpenseRow(deleteButton, id) {
-  deleteButton.parentElement.remove();
+  deleteButton.parentElement.parentElement.remove();
   for (let i = 0; i < expenseArray.length; i++) {
     if (expenseArray[i].id === id) {
       expenseArray.splice(i, 1);
@@ -114,6 +99,8 @@ function isValidateForm() {
 
   return isInputEmpty ? true : false;
 }
+
+console.log(isValidateForm());
 
 window.addEventListener('load', (e) => {
   e.preventDefault();
